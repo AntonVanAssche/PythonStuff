@@ -1,6 +1,6 @@
 # PythonStuff
 
-This is a collection of Python scripts/notes that I write when learning The Python (3) programming language.
+This is a collection of Python scripts/notes that I write when learning the Python (3) programming language.
 
 -  [Plot_ISS](./Plot_ISS/):
    -  Plot the International Space Station using Python.
