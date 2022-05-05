@@ -75,4 +75,7 @@ def main():
             playsound('./src/sound/pong.mp3', False)
             score.right_add_point()
 
-main()
+try:
+    main()
+except Exception:
+    pass
