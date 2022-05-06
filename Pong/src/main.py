@@ -3,7 +3,6 @@
 # Import libraries.
 from turtle import Screen
 from paddle import Paddle
-from playsound import playsound
 from ball import Ball
 from score import Score
 from border import Border
@@ -59,24 +58,19 @@ def main():
 
         if ball.ycor() > 290 or ball.ycor() < -290:
             ball.bounce_y()
-            playsound('./src/sound/pong.mp3', False)
 
         if ball.distance(right_paddle) < max_distance and ball.xcor() == 330:
             ball.bounce_x()
-            playsound('./src/sound/pong.mp3', False)
 
         if ball.distance(left_paddle) < max_distance and ball.xcor() == -330:
             ball.bounce_x()
-            playsound('./src/sound/pong.mp3', False)
 
         if ball.xcor() == 390:
             ball.bounce_wall()
-            playsound('./src/sound/pong.mp3', False)
             score.left_add_point()
 
         if ball.xcor() == -390:
             ball.bounce_wall()
-            playsound('./src/sound/pong.mp3', False)
             score.right_add_point()
 
 try:

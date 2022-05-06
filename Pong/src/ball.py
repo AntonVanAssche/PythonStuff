@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 
 from turtle import Turtle
+from playsound import playsound
+from threading import Thread
 
 class Ball(Turtle):
     def __init__(self):
@@ -17,11 +19,17 @@ class Ball(Turtle):
         self.goto(x, y)
 
     def bounce_y(self):
+        self.play_sound()
         self.y_move *= -1
 
     def bounce_x(self):
+        self.play_sound()
         self.x_move *= -1
 
     def bounce_wall(self):
         self.goto(0, 0)
         self.bounce_x()
+
+    def play_sound(self):
+        play_thread = Thread(target = lambda: playsound('./src/sound/pong.mp3'))
+        play_thread.start()
