@@ -8,3 +8,5 @@ This is a collection of Python scripts/notes that I write when learning the Pyth
    -  A simple implementation of the classic Pong game.
 -  [Morse](./Morse/):
    -  Translate a sentence to Morse code.
+-  [Convert Binary To Decimal](./Conver_Binary_To_Decimal/)
+   -  Convert a binary number to decimal and vice versa.
