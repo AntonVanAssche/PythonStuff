@@ -6,6 +6,7 @@ from paddle import Paddle
 from playsound import playsound
 from ball import Ball
 from score import Score
+from border import Border
 import time
 
 # Create and build the window.
@@ -16,6 +17,9 @@ screen.title("Pong written in Python!")
 
 # Hide the paddles till they are on the correct side of the screen.
 screen.tracer(0)
+
+# Call the border class to draw the border.
+border = Border()
 
 # Define both paddles.
 right_paddle = Paddle((350, 0))
