@@ -4,7 +4,7 @@ This is a collection of Python scripts/notes that I write when learning the Pyth
 
 -  [Hello World](./Hello%20World/)
    -  The script every programmer has written at least once.
--  [Plot_ISS](./Plot%20ISS/):
+-  [Plot ISS](./Plot%20ISS/):
    -  Plot the International Space Station using Python.
 -  [Pong](./Pong/):
    -  A simple implementation of the classic Pong game.
