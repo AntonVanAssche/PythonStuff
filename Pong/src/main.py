@@ -51,6 +51,9 @@ def main():
     # This is for Azerty users
     screen.onkey(left_paddle.go_up, "z")
 
+    # Wait 1 second before the game starts.
+    time.sleep(1)
+
     while True:
         time.sleep(0.01)
         screen.update()
