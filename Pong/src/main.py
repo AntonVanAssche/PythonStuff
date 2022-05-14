@@ -76,6 +76,9 @@ def main():
             ball.bounce_wall()
             score.right_add_point()
 
+        if score.left_score == "Winner" or score.right_score == "Winner":
+            screen.exitonclick()
+
 try:
     main()
 except Exception:
