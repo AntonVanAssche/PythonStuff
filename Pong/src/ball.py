@@ -3,6 +3,7 @@
 from turtle import Turtle
 from playsound import playsound
 from threading import Thread
+import os
 
 class Ball(Turtle):
     def __init__(self):
@@ -30,6 +31,14 @@ class Ball(Turtle):
         self.goto(0, 0)
         self.bounce_x()
 
+    def locate_sound(self):
+        self.dirs = ['/home/', 'c:\\']
+        for dir in self.dirs:
+            for r,d,f in os.walk(dir):
+                for files in f:
+                    if files == "pong.mp3":
+                        return os.path.join(r, files)
+
     def play_sound(self):
-        play_thread = Thread(target = lambda: playsound('./src/sound/pong.mp3'))
+        play_thread = Thread(target = lambda: playsound(self.locate_sound()))
         play_thread.start()
