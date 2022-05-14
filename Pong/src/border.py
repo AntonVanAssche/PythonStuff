@@ -15,4 +15,6 @@ class Border(Turtle):
         self.goto(400, 300)
         self.goto(-400, 300)
         self.goto(-400, -300)
+        self.goto(0, -300)
+        self.goto(0, 300)
 
