@@ -14,3 +14,5 @@ This is a collection of Python scripts/notes that I write when learning the Pyth
    -  Convert a binary number to decimal and vice versa.
 -  [Rock Paper Scissors](./Rock%20Paper%20Scissors/)
    -  A simple game of Rock Paper Scissors.
+-  [Simple Malware](./Simple%20Malware/)
+   -  A simple proof of concept of what ransomware does to your system.
