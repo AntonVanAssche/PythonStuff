@@ -16,3 +16,5 @@ This is a collection of Python scripts/notes that I write when learning the Pyth
    -  A simple game of Rock Paper Scissors.
 -  [Simple Malware](./Simple%20Malware/)
    -  A simple proof of concept of what ransomware does to your system.
+-  [Tic Tac Toe](./Tic%20Tac%20Toe/)
+   -  I think you know what this is. If not shame on you!
