@@ -27,6 +27,11 @@ left_paddle = Paddle((-350, 0))
 # Define the ball
 ball = Ball()
 
+# Locate the sound file that will be played when the ball bounces.
+# This will delay the game startup time depending on location of the sound file.
+# For example, if the sound file is in the home directory, it will take less time to load.
+path_to_sound = ball.locate_sound()
+
 # Define the maximum distance from the center of the ball
 # To the center of the paddle. This is needed for calculating
 # when the ball hits a paddle.
@@ -60,13 +65,13 @@ def main():
         ball.move()
 
         if ball.ycor() > 290 or ball.ycor() < -290:
-            ball.bounce_y()
+            ball.bounce_y(path_to_sound)
 
         if ball.distance(right_paddle) < max_distance and ball.xcor() == 330:
-            ball.bounce_x()
+            ball.bounce_x(path_to_sound)
 
         if ball.distance(left_paddle) < max_distance and ball.xcor() == -330:
-            ball.bounce_x()
+            ball.bounce_x(path_to_sound)
 
         if ball.xcor() == 390:
             ball.bounce_wall()

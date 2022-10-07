@@ -12,19 +12,19 @@ class Ball(Turtle):
         self.shape("circle")
         self.penup()
         self.x_move = 2.5
-        self.y_move = 2.5 
-        
+        self.y_move = 2.5
+
     def move(self):
         x = self.xcor() + self.x_move
         y = self.ycor() + self.y_move
         self.goto(x, y)
 
-    def bounce_y(self):
-        self.play_sound()
+    def bounce_y(self, path_to_sound=None):
+        self.play_sound(path_to_sound)
         self.y_move *= -1
 
-    def bounce_x(self):
-        self.play_sound()
+    def bounce_x(self, path_to_sound=None):
+        self.play_sound(path_to_sound)
         self.x_move *= -1
 
     def bounce_wall(self):
@@ -39,6 +39,6 @@ class Ball(Turtle):
                     if files == "pong.mp3":
                         return os.path.join(r, files)
 
-    def play_sound(self):
-        play_thread = Thread(target = lambda: playsound(self.locate_sound()))
+    def play_sound(self, path_to_sound):
+        play_thread = Thread(target = lambda: playsound(path_to_sound))
         play_thread.start()
